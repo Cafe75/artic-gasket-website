@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artic Gasket & Refrigeration | Houston, TX</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0D1B2A;
+  --blue:#0077B6;
+  --blue-light:#0096C7;
+  --ice:#ADE8F4;
+  --white:#FFFFFF;
+  --gray-50:#F8FAFC;
+  --gray-100:#F1F5F9;
+  --gray-200:#E2E8F0;
+  --gray-400:#94A3B8;
+  --gray-600:#475569;
+  --gray-900:#0F172A;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:#fff;color:var(--gray-900);overflow-x:hidden}
+
+/* HERO */
+.ag-hero{
+  background:var(--navy);
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:7rem 2rem 4rem;
+  position:relative;overflow:hidden;
+}
+.ag-hero-pattern{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,119,182,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,119,182,0.06) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+.ag-hero-glow{
+  position:absolute;
+  top:-20%;right:-10%;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(0,150,199,0.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.ag-hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%;}
+.ag-hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--ice);margin-bottom:1.5rem;
+}
+.ag-hero-tag::before{content:'';width:28px;height:2px;background:var(--blue-light);}
+.ag-hero h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(2.8rem,7vw,5.5rem);
+  font-weight:900;line-height:0.95;
+  text-transform:uppercase;letter-spacing:-0.01em;
+  color:var(--white);margin-bottom:1.5rem;
+}
+.ag-hero h1 span{color:var(--blue-light);}
+.ag-hero-sub{
+  font-size:1.1rem;font-weight:300;color:var(--gray-400);
+  line-height:1.7;max-width:500px;margin-bottom:2.5rem;
+}
+.ag-hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:3.5rem;}
+.ag-btn-primary{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;
+  background:var(--blue);color:#fff;
+  padding:0.9rem 2rem;text-decoration:none;
+  transition:background 0.2s,transform 0.15s;
+}
+.ag-btn-primary:hover{background:var(--blue-light);transform:translateY(-2px);}
+.ag-btn-secondary{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;
+  background:transparent;color:#fff;
+  border:1.5px solid rgba(255,255,255,0.25);
+  padding:0.9rem 2rem;text-decoration:none;
+  transition:border-color 0.2s,color 0.2s;
+}
+.ag-btn-secondary:hover{border-color:var(--blue-light);color:var(--blue-light);}
+.ag-hero-stats{
+  display:flex;gap:2.5rem;flex-wrap:wrap;
+  padding-top:2.5rem;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.ag-stat-item{display:flex;flex-direction:column;gap:2px;}
+.ag-stat-num{
+  font-family:'Montserrat',sans-serif;
+  font-size:1.6rem;font-weight:900;color:var(--blue-light);
+}
+.ag-stat-label{font-size:0.8rem;color:var(--gray-400);letter-spacing:0.05em;}
+
+/* MARQUEE STRIP */
+.ag-strip{
+  background:var(--blue);
+  padding:0.85rem 0;overflow:hidden;white-space:nowrap;
+}
+.ag-strip-inner{
+  display:inline-flex;gap:3rem;animation:marquee 25s linear infinite;
+}
+.ag-strip-inner span{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.7rem;font-weight:700;letter-spacing:0.18em;
+  text-transform:uppercase;color:#fff;
+  display:flex;align-items:center;gap:12px;
+}
+.ag-strip-inner span::before{
+  content:'';width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.5);
+}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.ag-section{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.ag-section-full{padding:5rem 2rem;}
+.ag-eyebrow{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.65rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:0.75rem;
+  display:flex;align-items:center;gap:10px;
+}
+.ag-eyebrow::before{content:'';width:20px;height:2px;background:var(--blue);}
+.ag-heading{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  font-weight:900;text-transform:uppercase;
+  line-height:1;color:var(--gray-900);margin-bottom:1rem;
+}
+.ag-heading-white{color:#fff;}
+
+/* SERVICES */
+.ag-services-bg{background:var(--gray-50);}
+.ag-services-intro{max-width:500px;margin-bottom:3rem;}
+.ag-services-intro p{color:var(--gray-600);line-height:1.7;margin-top:0.75rem;}
+.ag-services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1px;background:var(--gray-200);
+  border:1px solid var(--gray-200);
+}
+.ag-service-card{
+  background:#fff;padding:2rem;
+  position:relative;overflow:hidden;
+  transition:background 0.2s;
+}
+.ag-service-card::after{
+  content:'';position:absolute;
+  left:0;top:0;bottom:0;width:3px;
+  background:var(--blue);
+  transform:scaleY(0);transform-origin:bottom;
+  transition:transform 0.3s;
+}
+.ag-service-card:hover{background:var(--gray-50);}
+.ag-service-card:hover::after{transform:scaleY(1);}
+.ag-service-num{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.65rem;font-weight:700;letter-spacing:0.15em;
+  color:var(--blue);margin-bottom:1rem;
+}
+.ag-service-name{
+  font-family:'Montserrat',sans-serif;
+  font-size:1rem;font-weight:800;text-transform:uppercase;
+  letter-spacing:0.03em;color:var(--gray-900);margin-bottom:0.5rem;
+}
+.ag-service-desc{font-size:0.9rem;color:var(--gray-600);line-height:1.6;}
+
+/* PRODUCTS */
+.ag-products-bg{background:var(--navy);}
+.ag-products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  gap:10px;margin-top:2.5rem;
+}
+.ag-product-item{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:1rem 1.25rem;
+  display:flex;align-items:center;gap:10px;
+  font-family:'Montserrat',sans-serif;
+  font-size:0.8rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.04em;
+  color:rgba(255,255,255,0.75);
+  transition:background 0.2s,border-color 0.2s,color 0.2s;
+}
+.ag-product-item:hover{
+  background:rgba(0,119,182,0.15);
+  border-color:rgba(0,150,199,0.4);
+  color:#fff;
+}
+.ag-product-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--blue-light);flex-shrink:0;
+}
+
+/* WHY US */
+.ag-why-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;
+  align-items:center;
+}
+@media(max-width:768px){.ag-why-grid{grid-template-columns:1fr;gap:2.5rem;}}
+.ag-why-text p{
+  color:var(--gray-600);line-height:1.8;
+  font-size:1rem;margin:1rem 0;
+}
+.ag-checklist{list-style:none;margin-top:1.5rem;}
+.ag-checklist li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:0.95rem;color:var(--gray-600);
+  padding:0.6rem 0;
+  border-bottom:1px solid var(--gray-100);
+}
+.ag-checklist li:last-child{border-bottom:none;}
+.ag-check{
+  width:20px;height:20px;border-radius:50%;
+  background:var(--blue);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.ag-check svg{width:10px;height:10px;}
+.ag-stat-cards{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--gray-200);border:1px solid var(--gray-200);
+}
+.ag-stat-card{
+  background:var(--gray-50);
+  padding:2rem;text-align:center;
+}
+.ag-stat-card-num{
+  font-family:'Montserrat',sans-serif;
+  font-size:2.2rem;font-weight:900;color:var(--blue);
+  line-height:1;margin-bottom:0.4rem;
+}
+.ag-stat-card-label{
+  font-size:0.75rem;color:var(--gray-600);
+  text-transform:uppercase;letter-spacing:0.1em;
+  font-family:'Montserrat',sans-serif;font-weight:600;
+}
+
+/* AREAS */
+.ag-areas-grid{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:2rem;
+}
+.ag-area-tag{
+  background:var(--gray-100);
+  border:1px solid var(--gray-200);
+  padding:0.4rem 1rem;
+  font-size:0.85rem;color:var(--gray-600);
+  font-family:'Montserrat',sans-serif;font-weight:500;
+}
+
+/* CTA BAND */
+.ag-cta-band{
+  background:var(--blue);
+  padding:4rem 2rem;text-align:center;
+}
+.ag-cta-band h2{
+  font-family:'Montserrat',sans-serif;
+  font-size:clamp(1.5rem,3vw,2.2rem);
+  font-weight:900;text-transform:uppercase;
+  color:#fff;margin-bottom:0.75rem;
+}
+.ag-cta-band p{color:rgba(255,255,255,0.75);font-size:1rem;margin-bottom:2rem;}
+.ag-cta-band .ag-btn-white{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;
+  background:#fff;color:var(--blue);
+  padding:0.9rem 2.5rem;text-decoration:none;
+  transition:background 0.2s,transform 0.15s;margin:0 6px;
+}
+.ag-cta-band .ag-btn-white:hover{background:var(--ice);transform:translateY(-2px);}
+.ag-cta-band .ag-btn-outline-white{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;
+  background:transparent;color:#fff;
+  border:2px solid rgba(255,255,255,0.4);
+  padding:0.9rem 2.5rem;text-decoration:none;
+  transition:border-color 0.2s;margin:0 6px;
+}
+.ag-cta-band .ag-btn-outline-white:hover{border-color:#fff;}
+
+/* CONTACT */
+.ag-contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;
+}
+@media(max-width:768px){.ag-contact-grid{grid-template-columns:1fr;gap:2rem;}}
+.ag-contact-info h3{
+  font-family:'Montserrat',sans-serif;font-weight:800;
+  font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;
+  color:var(--gray-900);margin-bottom:1.5rem;
+}
+.ag-contact-detail{
+  display:flex;gap:12px;align-items:flex-start;margin-bottom:1.25rem;
+}
+.ag-contact-icon{
+  width:36px;height:36px;border-radius:0;
+  background:var(--blue);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.ag-contact-icon svg{width:16px;height:16px;color:#fff;}
+.ag-contact-label{font-size:0.75rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:0.1em;font-family:'Montserrat',sans-serif;font-weight:600;}
+.ag-contact-val{font-size:1rem;color:var(--gray-900);font-weight:500;margin-top:1px;}
+.ag-contact-val a{color:var(--blue);text-decoration:none;}
+.ag-form{display:flex;flex-direction:column;gap:12px;}
+.ag-field{display:flex;flex-direction:column;gap:5px;}
+.ag-field label{
+  font-family:'Montserrat',sans-serif;
+  font-size:0.65rem;font-weight:700;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--gray-600);
+}
+.ag-field input,.ag-field select,.ag-field textarea{
+  background:var(--gray-50);
+  border:1.5px solid var(--gray-200);
+  padding:0.75rem 1rem;
+  font-family:'Source Sans 3',sans-serif;font-size:0.95rem;
+  color:var(--gray-900);outline:none;
+  transition:border-color 0.2s;width:100%;
+}
+.ag-field input:focus,.ag-field select:focus,.ag-field textarea:focus{
+  border-color:var(--blue);background:#fff;
+}
+.ag-field select{appearance:none;cursor:pointer;}
+.ag-field textarea{resize:vertical;min-height:100px;}
+.ag-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:500px){.ag-form-row{grid-template-columns:1fr;}}
+.ag-submit{
+  font-family:'Montserrat',sans-serif;font-weight:700;
+  font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;
+  background:var(--blue);color:#fff;
+  border:none;padding:1rem 2rem;cursor:pointer;
+  width:100%;transition:background 0.2s;margin-top:4px;
+}
+.ag-submit:hover{background:var(--blue-light);}
+
+/* FOOTER */
+.ag-footer{
+  background:var(--gray-900);
+  padding:3rem 2rem;
+}
+.ag-footer-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;
+}
+.ag-footer-logo{
+  font-family:'Montserrat',sans-serif;
+  font-size:1rem;font-weight:900;letter-spacing:0.05em;
+  text-transform:uppercase;color:#fff;
+}
+.ag-footer-logo span{color:var(--blue-light);}
+.ag-footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.ag-footer-link{font-size:0.8rem;color:var(--gray-400);text-decoration:none;}
+.ag-footer-link:hover{color:#fff;}
+.ag-footer-copy{font-size:0.75rem;color:var(--gray-400);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.ag-hero-tag{animation:fadeUp 0.5s ease both;}
+.ag-hero h1{animation:fadeUp 0.5s 0.1s ease both;}
+.ag-hero-sub{animation:fadeUp 0.5s 0.2s ease both;}
+.ag-hero-btns{animation:fadeUp 0.5s 0.3s ease both;}
+.ag-hero-stats{animation:fadeUp 0.5s 0.4s ease both;}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .ag-hero{padding:6rem 1.25rem 3rem;}
+  .ag-section{padding:3.5rem 1.25rem;}
+  .ag-section-full{padding:3.5rem 1.25rem;}
+  .ag-hero-stats{gap:1.5rem;}
+  .ag-cta-band .ag-btn-white,.ag-cta-band .ag-btn-outline-white{display:block;margin:6px auto;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="ag-hero">
+  <div class="ag-hero-pattern"></div>
+  <div class="ag-hero-glow"></div>
+  <div class="ag-hero-inner">
+    <p class="ag-hero-tag">Houston, Texas · Licensed LLC · Free Quotes</p>
+    <h1>Commercial<br><span>Refrigeration</span><br>Parts & Repair</h1>
+    <p class="ag-hero-sub">Gaskets, PVC strip curtains, walk-in cooler hardware, door sweeps, water filters, and HVAC supplies — we supply and install across the greater Houston area.</p>
+    <div class="ag-hero-btns">
+      <a href="tel:8324174375" class="ag-btn-primary">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg>
+        Call (832) 417-4375
+      </a>
+      <a href="#contact" class="ag-btn-secondary">Request a Free Quote</a>
+    </div>
+    <div class="ag-hero-stats">
+      <div class="ag-stat-item"><span class="ag-stat-num">Same</span><span class="ag-stat-label">Day service available</span></div>
+      <div class="ag-stat-item"><span class="ag-stat-num">Free</span><span class="ag-stat-label">Quote every job</span></div>
+      <div class="ag-stat-item"><span class="ag-stat-num">LLC</span><span class="ag-stat-label">Licensed & insured</span></div>
+      <div class="ag-stat-item"><span class="ag-stat-num">HTX</span><span class="ag-stat-label">Houston based</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="ag-strip">
+  <div class="ag-strip-inner">
+    <span>Door Gaskets</span><span>PVC Strip Curtains</span><span>Walk-in Cooler Hardware</span><span>Door Sweeps</span><span>Water Filters</span><span>HVAC Cleaning Supplies</span><span>Proofer Gaskets</span><span>Oven Gaskets</span><span>Metal Door Plates</span><span>Refrigeration Parts</span>
+    <span>Door Gaskets</span><span>PVC Strip Curtains</span><span>Walk-in Cooler Hardware</span><span>Door Sweeps</span><span>Water Filters</span><span>HVAC Cleaning Supplies</span><span>Proofer Gaskets</span><span>Oven Gaskets</span><span>Metal Door Plates</span><span>Refrigeration Parts</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="ag-services-bg">
+  <div class="ag-section">
+    <div class="ag-services-intro">
+      <p class="ag-eyebrow">What we do</p>
+      <h2 class="ag-heading">Products &<br>Services</h2>
+      <p>We supply and install commercial refrigeration parts for restaurants, grocery stores, hotels, and commercial kitchens across Houston. Fast turnaround, real stock, no waiting on warehouse shipments.</p>
+    </div>
+    <div class="ag-services-grid">
+      <div class="ag-service-card">
+        <p class="ag-service-num">01</p>
+        <p class="ag-service-name">Door Gaskets</p>
+        <p class="ag-service-desc">Custom-cut gaskets for walk-in coolers, freezers, proofers, and ovens. We measure, supply, and install — no guesswork.</p>
+      </div>
+      <div class="ag-service-card">
+        <p class="ag-service-num">02</p>
+        <p class="ag-service-name">PVC Strip Curtains</p>
+        <p class="ag-service-desc">Heavy-duty PVC curtains for walk-in coolers, freezers, and warehouse doors. Standard and custom sizing available.</p>
+      </div>
+      <div class="ag-service-card">
+        <p class="ag-service-num">03</p>
+        <p class="ag-service-name">Walk-in Cooler Hardware</p>
+        <p class="ag-service-desc">Hinges, door closers, handles, latches — all hardware to keep your walk-in cooler and freezer doors operating properly.</p>
+      </div>
+      <div class="ag-service-card">
+        <p class="ag-service-num">04</p>
+        <p class="ag-service-name">Door Sweeps & Plates</p>
+        <p class="ag-service-desc">Commercial door sweeps and metal kick plates to protect your doors and maintain energy-efficient seals.</p>
+      </div>
+      <div class="ag-service-card">
+        <p class="ag-service-num">05</p>
+        <p class="ag-service-name">Water Filters</p>
+        <p class="ag-service-desc">Commercial water filtration for ice machines, beverage equipment, and food service applications.</p>
+      </div>
+      <div class="ag-service-card">
+        <p class="ag-service-num">06</p>
+        <p class="ag-service-name">HVAC Cleaning Supplies</p>
+        <p class="ag-service-desc">Coil cleaners, condensate tablets, and professional maintenance supplies for commercial HVAC systems.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="ag-products-bg">
+  <div class="ag-section">
+    <p class="ag-eyebrow" style="color:var(--ice);">Full catalog</p>
+    <h2 class="ag-heading ag-heading-white">Everything<br>We Carry</h2>
+    <div class="ag-products-grid">
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Walk-in Cooler Gaskets</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Freezer Door Gaskets</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Proofer Gaskets</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Oven Door Gaskets</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>PVC Strip Curtains</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>PVC Curtain Rolls</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Door Sweeps</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Metal Kick Plates</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Cooler Hinges</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Door Handles & Latches</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Door Closers</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Walk-in Hardware Kits</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Water Filters</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Ice Machine Filters</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>HVAC Coil Cleaner</div>
+      <div class="ag-product-item"><div class="ag-product-dot"></div>Condensate Tablets</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<div style="background:#fff;">
+  <div class="ag-section">
+    <div class="ag-why-grid">
+      <div class="ag-why-text">
+        <p class="ag-eyebrow">Why choose us</p>
+        <h2 class="ag-heading">Fast, Local,<br>Reliable</h2>
+        <p>A broken cooler gasket or failed door seal isn't just an inconvenience — it's lost product, failed health inspections, and money out of your pocket every hour it's not fixed.</p>
+        <p>We're a Houston-based business. We carry real stock, move fast, and stand behind our work. No waiting a week for parts to ship from a warehouse across the country.</p>
+        <ul class="ag-checklist">
+          <li><div class="ag-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Same-day service available on most jobs</li>
+          <li><div class="ag-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Free quote on every job — no surprises</li>
+          <li><div class="ag-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Licensed LLC — insured and professional</li>
+          <li><div class="ag-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>We serve restaurants, grocery stores, hotels & more</li>
+        </ul>
+        <a href="tel:8324174375" class="ag-btn-primary" style="margin-top:2rem;display:inline-flex;">Call (832) 417-4375</a>
+      </div>
+      <div>
+        <div class="ag-stat-cards">
+          <div class="ag-stat-card"><div class="ag-stat-card-num">24h</div><div class="ag-stat-card-label">Fast turnaround</div></div>
+          <div class="ag-stat-card"><div class="ag-stat-card-num">LLC</div><div class="ag-stat-card-label">Licensed business</div></div>
+          <div class="ag-stat-card"><div class="ag-stat-card-num">100%</div><div class="ag-stat-card-label">Houston local</div></div>
+          <div class="ag-stat-card"><div class="ag-stat-card-num">Free</div><div class="ag-stat-card-label">Every quote</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE AREAS -->
+<div style="background:var(--gray-50);">
+  <div class="ag-section">
+    <p class="ag-eyebrow">Where we work</p>
+    <h2 class="ag-heading">Houston<br>Metro Area</h2>
+    <div class="ag-areas-grid">
+      <span class="ag-area-tag">Houston</span>
+      <span class="ag-area-tag">Sugar Land</span>
+      <span class="ag-area-tag">Katy</span>
+      <span class="ag-area-tag">Pearland</span>
+      <span class="ag-area-tag">Pasadena</span>
+      <span class="ag-area-tag">The Woodlands</span>
+      <span class="ag-area-tag">Humble</span>
+      <span class="ag-area-tag">Stafford</span>
+      <span class="ag-area-tag">Missouri City</span>
+      <span class="ag-area-tag">Bellaire</span>
+      <span class="ag-area-tag">Spring</span>
+      <span class="ag-area-tag">Cypress</span>
+      <span class="ag-area-tag">Conroe</span>
+      <span class="ag-area-tag">League City</span>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BAND -->
+<div class="ag-cta-band">
+  <h2>Need a Part or Repair?<br>Call Us Today</h2>
+  <p>Free quotes on every job. Same-day service available across Houston.</p>
+  <a href="tel:8324174375" class="ag-btn-white">Call (832) 417-4375</a>
+  <a href="#contact" class="ag-btn-outline-white">Send a Message</a>
+</div>
+
+<!-- CONTACT -->
+<div style="background:#fff;" id="contact">
+  <div class="ag-section">
+    <p class="ag-eyebrow">Get in touch</p>
+    <h2 class="ag-heading" style="margin-bottom:2.5rem;">Request a<br>Free Quote</h2>
+    <div class="ag-contact-grid">
+      <div class="ag-contact-info">
+        <h3>Contact Info</h3>
+        <div class="ag-contact-detail">
+          <div class="ag-contact-icon"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/></svg></div>
+          <div><div class="ag-contact-label">Phone</div><div class="ag-contact-val"><a href="tel:8324174375">(832) 417-4375</a></div></div>
+        </div>
+        <div class="ag-contact-detail">
+          <div class="ag-contact-icon"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg></div>
+          <div><div class="ag-contact-label">Email</div><div class="ag-contact-val"><a href="mailto:Sales@articgasketrefrigeration.net">Sales@articgasketrefrigeration.net</a></div></div>
+        </div>
+        <div class="ag-contact-detail">
+          <div class="ag-contact-icon"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></div>
+          <div><div class="ag-contact-label">Address</div><div class="ag-contact-val">16920 Kuykendahl, Suite 106<br>Houston, TX 77068</div></div>
+        </div>
+        <div class="ag-contact-detail">
+          <div class="ag-contact-icon"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/></svg></div>
+          <div><div class="ag-contact-label">Hours</div><div class="ag-contact-val">Mon–Sat: 9AM – 6PM<br>Same-day service available</div></div>
+        </div>
+      </div>
+      <div>
+        <form class="ag-form" onsubmit="agSubmit(event)">
+          <div class="ag-form-row">
+            <div class="ag-field"><label>Your name</label><input type="text" placeholder="John Martinez" required></div>
+            <div class="ag-field"><label>Phone number</label><input type="tel" placeholder="(713) 000-0000" required></div>
+          </div>
+          <div class="ag-field"><label>Business name</label><input type="text" placeholder="Restaurant or business name"></div>
+          <div class="ag-field">
+            <label>What do you need?</label>
+            <select required>
+              <option value="" disabled selected>Select a product or service</option>
+              <option>Door gasket replacement</option>
+              <option>PVC strip curtains</option>
+              <option>Walk-in cooler hardware</option>
+              <option>Door sweep / metal plate</option>
+              <option>Water filter</option>
+              <option>HVAC cleaning supplies</option>
+              <option>Multiple items / full order</option>
+              <option>Not sure — need advice</option>
+            </select>
+          </div>
+          <div class="ag-field"><label>Additional details</label><textarea placeholder="Equipment type, size, urgency, anything else helpful..."></textarea></div>
+          <button type="submit" class="ag-submit">Send My Request →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="ag-footer">
+  <div class="ag-footer-inner">
+    <div class="ag-footer-logo">Artic Gasket <span>&</span> Refrigeration</div>
+    <div class="ag-footer-links">
+      <a href="#" class="ag-footer-link">Home</a>
+      <a href="#contact" class="ag-footer-link">Quote</a>
+      <a href="tel:8324174375" class="ag-footer-link">(832) 417-4375</a>
+      <a href="mailto:Sales@articgasketrefrigeration.net" class="ag-footer-link">Email Us</a>
+    </div>
+    <p class="ag-footer-copy">© 2025 Artic Gasket & Refrigeration LLC · Houston, TX</p>
+  </div>
+</footer>
+
+<script>
+function agSubmit(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('.ag-submit');
+  btn.textContent='Request sent! We\'ll call you soon.';
+  btn.style.background='#1D9E75';
+  btn.disabled=true;
+}
+</script>
+</body>
+</html>
